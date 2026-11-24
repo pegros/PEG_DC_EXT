@@ -17,6 +17,20 @@ Typical use cases are:
 * to display **Data 360** data as standard list views
 * to query both local and **Data360** data via standard SOQL in Apex or Flows.
 
+Such _External Objects_ based on Data360 DMOs may be displayed in Lightning
+experience in: 
+* standard list views
+
+![DMO Object Display](/media/sfpegData360ConnectorExtObjectList.png)
+
+* standard record pages
+
+![DMO Object Display](/media/sfpegData360ConnectorExtObjectPage.png)
+
+* compact layouts for record lookup hovering
+
+![DMO Object Display](/media/sfpegData360ConnectorExtObjectCompact.png)
+
 ⚠️ This connector requires a **Salesforce Connect** license on production Orgs.
 
 
@@ -68,7 +82,7 @@ Object being executed on this data space
 * their column types derived from the DMO field types (`Text` for text, email, phone...,
 `Number` with 4 decimal places, `Boolean`, `DateTime` for date and datetime, `Url`)
 
-![Data Source Objects](/media/sfpegData360ConnectorExternalObjectFields.png)
+![Data Source Objects](/media/sfpegData360ConnectorExtObjectFields.png)
 
 ℹ️ Non `default` data spaces usually prefixing their DMO API names (e.g. `spe_Orders__dlm`),
 their table names are unique. If a same DMO name exists in several data spaces, the `default`
@@ -81,6 +95,9 @@ data space one is kept (the other ones being ignored with a `WARN` debug log).
 ℹ️ By defaults, DMO fields are synced as simple base types, i.e. `numbers`, `datetime`, `text`. 
 From Setup, it is later possible to modify the field types to `percent`, `currency`, `date`,
 `checkbox`... to better match how they should be displayed in Lightning UX.
+
+ℹ️ You may even define lookup relationship with Salesforce SObjects or replicate DMO relationships
+in the field configuration (`lookup`or `external lookup` fields).
 
 ⚠️ Beware that `richtext` fields are not supported by external objects. Richtext fields remain
 mapped as text fields but the **[sfpegRichTextDisplay](/help/sfpegRichTextDisplay.md)** LWC
