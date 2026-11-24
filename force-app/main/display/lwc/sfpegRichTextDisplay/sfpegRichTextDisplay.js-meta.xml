@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>SF PEG DC Rich Text Display</masterLabel>
+    <description>Displays a rich text field of the current record (e.g. an External Object) via lightning-formatted-rich-text. Part of the PEG_DC_EXT package.</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="fieldName" type="String" label="Field Name" required="true"
+                description="API name of the rich text field to display (e.g. Description__c)."/>
+            <property   name="wrappingClass" type="String" label="Wrapping CSS Class"
+                default="slds-theme_default slds-p-horizontal_large" description="CSS Classes for the wrapping div"/>
+            <property name="fieldLabel" type="String" label="Field Label"
+                description="Optional label override (field label from object metadata used by default)."/>
+            <property name="isDebug" type="Boolean" label="Debug?" default="false"
+                description="Activates debug logs in the browser console."/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

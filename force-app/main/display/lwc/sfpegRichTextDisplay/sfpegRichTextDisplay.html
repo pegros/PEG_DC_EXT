@@ -1,0 +1,25 @@
+<template>
+    <div class={wrappingClass}>
+    <div class="slds-form-element slds-form-element_readonly slds-form-element_stacked">
+        <span class="slds-form-element__label">{displayLabel}</span>
+        <div class="slds-form-element__control">
+            <template lwc:if={configError}>
+                <div class="slds-form-element__static slds-text-color_error">{configError}</div>
+            </template>
+            <template lwc:elseif={errorMessage}>
+                <div class="slds-form-element__static slds-text-color_error">{errorMessage}</div>
+            </template>
+            <template lwc:elseif={isLoaded}>
+                <div class="slds-form-element__static">
+                    <lightning-formatted-rich-text value={fieldValue}></lightning-formatted-rich-text>
+                </div>
+            </template>
+            <template lwc:else>
+                <div class="slds-form-element__static slds-is-relative">
+                    <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+                </div>
+            </template>
+        </div>
+    </div>
+    </div>
+</template>
