@@ -74,15 +74,8 @@ evolutions made.
 ### November 2026
 
 First version of the package.
+* Initialisation of the **[sfpegData360Connector](/help/sfpegData360Connector.md)** custom
+Apex connector for _Salesforce Connect_ (a.k.a. _External Objects_).
+* Initialization of the **[sfpegRichTextDisplay](/help/sfpegRichTextDisplay.md)** LWC
+component to force _richText_ field display of such fields not supported by _External Objects_.
 
-Changes done:
-* Addition of the **[sfpegDataCloudQueriesV3_SVC](/help/sfpegDataCloudQueriesV3.md)** Apex class,
-new variant of the **[sfpegDataCloudQueries_SVC](/help/sfpegDataCloudQueries.md)** Apex class
-relying on the new **sfsqlquery** Apex framework instead of **ConnectApi.CdpQuery**
-(synchronous queries only).
-* Addition of the **[sfpegData360QueryToolCmp](/help/sfpegData360QueryTool.md)** standalone
-**Data 360** SQL query tool (with its **sfpegData360Query_SVC** Apex controller, data masking rules
-and permission sets).
-* Move of **[PEG_LIST](https://github.com/pegros/PEG_LIST)** specific metadata from this
-**PEG_DC** into this **[PEG_LIST_DC](https://github.com/pegros/PEG_LIST_DC)** repository to
-segregate deployment dependencies. 

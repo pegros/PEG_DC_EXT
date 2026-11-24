@@ -49,3 +49,6 @@ Deployment.md
 config/
 scripts/
 legacy/
+
+force-app/main/default
+.husky/
