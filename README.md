@@ -43,7 +43,7 @@ The following two options are therefore available for package installation:
 
 To retrieve the SFDX project, you may simply execute a git clone from the GitHub repository.
 ```
-git clone git@github.com:pegros/PEG_DC.git
+git clone git@github.com:pegros/PEG_DC_EXT.git
 ```
 
 Via SFDX you may then deploy it on you Org
